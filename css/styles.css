@@ -33,9 +33,9 @@
     /* Lightweight fallback used when WebGL/PixiJS cannot initialize. */
     body.erosion-fallback #erosion-canvas {
       background:
-        radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.36), transparent 32%),
-        repeating-radial-gradient(circle at 35% 40%, rgba(6, 78, 59, 0.32) 0 2px, transparent 3px 12px);
-      opacity: min(0.88, calc(var(--erosion-progress, 0) * 1.8));
+        radial-gradient(ellipse at 50% 50%, rgba(16, 185, 129, 0.32), transparent 18%),
+        repeating-radial-gradient(ellipse at 35% 50%, rgba(6, 78, 59, 0.22) 0 2px, transparent 3px 12px);
+      opacity: min(0.36, calc(var(--erosion-progress, 0) * 0.72));
       mix-blend-mode: multiply;
     }
 

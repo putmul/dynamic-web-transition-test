@@ -49,9 +49,12 @@ void main(void) {
   float dissolve = smoothstep(-uEdgeSoftness, uEdgeSoftness, distanceFromFront);
   float granularHole = smoothstep(0.26, 0.74, localNoise + flowNoise * 0.2 + uProgress * 0.3);
   float velocityGlow = min(0.22, abs(uSignedVelocity) * 0.05);
+  float transitionStrength = sin(uProgress * 3.14159265);
+  float erosionBand = 1.0 - smoothstep(0.035, 0.24, abs(distanceFromFront));
 
   color.rgb = mix(color.rgb, vec3(0.02, 0.41, 0.24), dissolve * (0.3 + velocityGlow));
-  color.a *= 1.0 - dissolve * granularHole * 0.78;
+  color.a *= erosionBand * (0.12 + transitionStrength * 0.76);
+  color.a *= 1.0 - granularHole * 0.45;
   finalColor = color;
 }
 `;
@@ -140,7 +143,7 @@ export async function createErosionRenderer(canvas) {
       if (intensity > 0.015) {
         erosionLayer.rect(-64, -32, width + 128, height + 64).fill({
           color: 0x064e3b,
-          alpha: Math.min(0.92, intensity * 0.86)
+          alpha: Math.min(0.58, intensity * 0.54)
         });
 
         const columns = Math.ceil(width / 20) + 4;
@@ -157,7 +160,7 @@ export async function createErosionRenderer(canvas) {
             .rect(x - fragmentWidth * 0.5, startY, fragmentWidth, Math.max(3, endY - startY))
             .fill({
               color: index % 3 === 0 ? 0x10b981 : 0x059669,
-              alpha: 0.14 + edgeNoise * 0.34
+              alpha: 0.14 + edgeNoise * 0.94
             });
 
           if (edgeNoise > 0.38) {

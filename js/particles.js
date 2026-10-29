@@ -1,9 +1,9 @@
 import { Assets, Container, Sprite, Texture } from 'pixi.js';
 
 const LEAF_TEXTURE_URLS = [
-  '/assets/leaves/leaf-lanceolate.svg',
-  '/assets/leaves/leaf-maple.svg',
-  '/assets/leaves/leaf-round.svg'
+  '/assets/leaves/leaf-kerria.png',
+  '/assets/leaves/leaf-pear.png',
+  '/assets/leaves/leaf-litchi.png'
 ];
 
 function seededRandom(seed) {
