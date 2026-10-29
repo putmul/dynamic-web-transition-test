@@ -1,0 +1,96 @@
+@layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #f7faf7;
+        color: #0d261e;
+        selection-background-color: #059669;
+        selection-color: #ffffff;
+      }
+    }
+
+    /* Scroll-driven PixiJS erosion layer */
+    #erosion-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      pointer-events: none;
+      z-index: 35;
+    }
+
+    /* Sections remain usable when the animation layer is unavailable. */
+    .editorial-section {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+
+    /* Lightweight fallback used when WebGL/PixiJS cannot initialize. */
+    body.erosion-fallback #erosion-canvas {
+      background:
+        radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.36), transparent 32%),
+        repeating-radial-gradient(circle at 35% 40%, rgba(6, 78, 59, 0.32) 0 2px, transparent 3px 12px);
+      opacity: min(0.88, calc(var(--erosion-progress, 0) * 1.8));
+      mix-blend-mode: multiply;
+    }
+
+    /* Hairline Botanical Accents */
+    .hairline-b {
+      border-bottom: 1px solid rgba(6, 78, 59, 0.1);
+    }
+    .hairline-t {
+      border-top: 1px solid rgba(6, 78, 59, 0.1);
+    }
+    .hairline-box {
+      border: 1px solid rgba(6, 78, 59, 0.1);
+    }
+
+    /* Glass frosted cards with subtle botanical hints */
+    .botanical-card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(5, 150, 105, 0.14);
+      box-shadow: 0 4px 24px -2px rgba(6, 78, 59, 0.04);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .botanical-card:hover {
+      border-color: rgba(5, 150, 105, 0.38);
+      box-shadow: 0 12px 32px -4px rgba(6, 78, 59, 0.09), 0 0 12px rgba(16, 185, 129, 0.12);
+    }
+
+    /* Range slider styled with emerald botanical thumb */
+    input[type=range] {
+      -webkit-appearance: none;
+      background: #dbe9df;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background: #059669;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.4), 0 0 0 3px #ffffff;
+      border: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.6), 0 0 0 3px #ffffff;
+    }
+
+    /* Atmospheric ambient radial glow */
+    .botanical-halo {
+      background: radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.09) 0%, rgba(6, 78, 59, 0.03) 45%, transparent 75%);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #erosion-canvas {
+        display: none !important;
+      }
+    }
