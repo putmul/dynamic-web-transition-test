@@ -53,7 +53,7 @@ void main(void) {
   float erosionBand = 1.0 - smoothstep(0.035, 0.24, abs(distanceFromFront));
 
   color.rgb = mix(color.rgb, vec3(0.02, 0.41, 0.24), dissolve * (0.3 + velocityGlow));
-  color.a *= erosionBand * (0.12 + transitionStrength * 0.76);
+  color.a *= erosionBand * (0.12 + transitionStrength * 0.96);
   color.a *= 1.0 - granularHole * 0.45;
   finalColor = color;
 }

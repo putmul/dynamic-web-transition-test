@@ -30,6 +30,20 @@
       filter: none;
     }
 
+    /* Each chapter owns its reveal animation while its section keeps its
+       height, background, and anchor position in the document flow. */
+    .section-reveal {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .section-reveal {
+        will-change: opacity, transform, filter;
+      }
+    }
+
     /* Lightweight fallback used when WebGL/PixiJS cannot initialize. */
     body.erosion-fallback #erosion-canvas {
       background:
