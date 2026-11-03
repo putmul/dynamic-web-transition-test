@@ -4,8 +4,7 @@ Website edukasi interaktif tentang efisiensi energi perangkat digital dan pendin
 
 ## Fitur
 
-# Animasi transisi dan visual interaktif menggunakan Pixi.js, 
-# Smooth Scrolling dan kontrol dengan GSAP dan Lenis
+### Animasi transisi dan visual interaktif menggunakan Pixi.js, Smooth Scrolling dan kontrol dengan GSAP dan Lenis
 
 - Edukasi tentang energi dan emisi karbon
 - Kalkulator jejak energi
