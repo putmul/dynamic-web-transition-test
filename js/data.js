@@ -1,52 +1,52 @@
 export const QUIZ_QUESTIONS = [
   {
-    question: 'Berapa suhu AC yang direkomendasikan standar Ditjen EBTKE ESDM untuk efisiensi energi optimal dan kenyamanan termal tropis?',
+    question: 'Mengapa penggunaan listrik dapat berkaitan dengan emisi karbon?',
     options: [
-      { text: '16°C – 18°C (Didinginkan secepat mungkin)', correct: false },
-      { text: '20°C – 22°C (Cukup dingin untuk ruangan lembap)', correct: false },
-      { text: '24°C – 25°C (Keseimbangan termal & beban kompresor optimal)', correct: true },
-      { text: 'Dibiarkan diatur otomatis pabrik tanpa batas', correct: false }
+      { text: 'Karena semua perangkat mengeluarkan CO₂ langsung dari stopkontak', correct: false },
+      { text: 'Karena sebagian listrik masih dibangkitkan dengan membakar bahan bakar fosil', correct: true },
+      { text: 'Karena kWh adalah jenis gas rumah kaca', correct: false },
+      { text: 'Karena seluruh listrik selalu berasal dari batu bara', correct: false }
     ],
-    explanation: 'Rekomendasi resmi ESDM dan standar ASHRAE menetapkan 24°C–25°C. Setiap 1°C di bawahnya membebani kompresor 8-10% lebih berat tanpa menambah kenyamanan sejati.'
+    explanation: 'Listrik merupakan energi sekunder yang dihasilkan dari berbagai sumber. Ketika pembangkit membakar batu bara atau gas, proses tersebut melepaskan CO₂. Besarnya emisi bergantung pada jumlah listrik yang digunakan dan bauran sumber energi dalam jaringan listrik.'
   },
   {
-    question: "Apa yang dimaksud dengan fenomena 'Vampire Draw' pada ekosistem komputasi mahasiswa?",
+    question: 'Bagaimana peningkatan CO₂ dapat memengaruhi suhu dan iklim Bumi?',
     options: [
-      { text: 'Daya residu yang diserap adaptor charger saat tetap dicolok meski gawai dilepas', correct: true },
-      { text: 'Baterai ponsel yang aus karena dipakai bermain game', correct: false },
-      { text: 'Kecerahan layar komputer yang berlebihan di malam hari', correct: false },
-      { text: 'Aplikasi latar belakang yang menyedot koneksi internet', correct: false }
+      { text: 'CO₂ menyerap sebagian radiasi panas sehingga efek rumah kaca menguat', correct: true },
+      { text: 'CO₂ menghentikan seluruh sinar Matahari sebelum mencapai Bumi', correct: false },
+      { text: 'CO₂ langsung berubah menjadi oksigen di atmosfer', correct: false },
+      { text: 'CO₂ membuat suhu global selalu turun', correct: false }
     ],
-    explanation: 'Phantom load/vampire draw menyerap 1–5W secara terus-menerus melalui induksi trafo adaptor yang tertancap ke stopkontak.'
+    explanation: 'Gas rumah kaca seperti CO₂ menyerap dan memancarkan kembali sebagian radiasi inframerah yang dilepaskan permukaan Bumi. Jika konsentrasinya meningkat, lebih banyak panas tertahan di atmosfer sehingga suhu rata-rata global dan pola iklim dapat berubah.'
   },
   {
-    question: 'Bagaimana cara kerja sirkulator kipas angin (25W) dalam mendukung efisiensi AC ruangan?',
+    question: 'Manakah urutan hubungan sebab-akibat yang paling tepat?',
     options: [
-      { text: 'Membantu meratakan persebaran udara dingin dan efek sejuk semilir alami', correct: true },
-      { text: 'Menurunkan temperatur kamar secara kimiawi', correct: false },
-      { text: 'Menghentikan kompresor AC secara paksa', correct: false },
-      { text: 'Menyerap uap air secara termal', correct: false }
+      { text: 'Konsumsi listrik → emisi → efek rumah kaca → perubahan iklim', correct: true },
+      { text: 'Perubahan iklim → kWh → pembangkit → suhu ruangan', correct: false },
+      { text: 'Efek rumah kaca → charger → listrik → bahan bakar fosil', correct: false },
+      { text: 'Emisi → cahaya alami → kWh → pembentukan awan', correct: false }
     ],
-    explanation: 'Pergerakan angin kecil mempercepat penguapan keringat di kulit, membuat suhu 25°C terasa seperti 22°C dengan konsumsi listrik puluhan kali lebih hemat.'
+    explanation: 'Listrik yang dibangkitkan dengan bahan bakar fosil dapat menghasilkan emisi. Emisi gas rumah kaca memperkuat panas yang tertahan di atmosfer, lalu berkontribusi pada kenaikan suhu rata-rata dan perubahan pola iklim dalam jangka panjang.'
   },
   {
-    question: 'Tindakan digital manakah yang paling efektif menjaga umur baterai sekaligus menekan konsumsi daya laptop?',
+    question: 'Kebiasaan manakah yang paling tepat untuk menghemat energi AC tanpa mengurangi kenyamanan secara berlebihan?',
     options: [
-      { text: 'Membatasi pengisian pada 80% & menerapkan sleep mode 15 menit', correct: true },
-      { text: 'Membiarkan laptop terus menyala agar tidak perlu reboot', correct: false },
-      { text: 'Menggunakan screensaver grafis 3D resolusi tinggi', correct: false },
-      { text: 'Mengunduh file tanpa henti sepanjang malam', correct: false }
+      { text: 'Menurunkan AC ke 16°C dan mematikan semua kipas', correct: false },
+      { text: 'Menaikkan suhu AC 1–2°C, memakai kipas kecil untuk meratakan udara, dan memilih mode Sleep/Eco jika tersedia', correct: true },
+      { text: 'Membiarkan AC menyala sepanjang hari agar tidak perlu bekerja ulang', correct: false },
+      { text: 'Membuka pintu dan jendela saat AC sedang menyala', correct: false }
     ],
-    explanation: 'Batas 80% memelihara katoda baterai litium dan sleep mode menghentikan beban idle hingga 80 Watt pada prosesor laptop.'
+    explanation: 'Menaikkan setelan AC 1–2°C dapat menurunkan beban pendinginan, sementara kipas membantu meratakan udara dingin. Mode Sleep atau Eco juga dapat mengatur kerja perangkat secara lebih hemat. Hasilnya tetap bergantung pada ukuran ruangan, durasi penggunaan, dan kondisi AC.'
   },
   {
-    question: 'Mengapa efisiensi energi kampus terhubung langsung dengan target SDG 9 dan SDG 13?',
+    question: 'Manakah kebiasaan yang paling jelas mengurangi listrik yang terpakai tanpa manfaat?',
     options: [
-      { text: 'Mendorong infrastruktur digital bersih (SDG 9) dan aksi nyata dekarbonisasi (SDG 13)', correct: true },
-      { text: 'Hanya sekadar penghematan anggaran universitas', correct: false },
-      { text: 'Karena mahasiswa dilarang memakai perangkat digital', correct: false },
-      { text: 'Tidak berkaitan secara langsung', correct: false }
+      { text: 'Membiarkan charger, lampu, dan perangkat berada dalam kondisi standby', correct: false },
+      { text: 'Mencabut charger setelah selesai, mematikan perangkat saat tidak digunakan, dan mematikan lampu di area kosong', correct: true },
+      { text: 'Menyalakan semua lampu agar ruangan tidak pernah gelap', correct: false },
+      { text: 'Membiarkan laptop dan AC menyala meskipun ruangan kosong', correct: false }
     ],
-    explanation: 'SDG 9 menekankan pembaruan infrastruktur rendah karbon sedangkan SDG 13 menghendaki mitigasi iklim terukur di seluruh sektor konsumsi.'
+    explanation: 'Mencabut charger setelah digunakan, mematikan perangkat dan AC saat tidak diperlukan, serta mematikan lampu di area kosong mencegah konsumsi listrik yang tidak memberi manfaat. Conservation Mode pada laptop terutama membantu menjaga kesehatan baterai ketika perangkat perlu tetap tercolok.'
   }
 ];
